@@ -6,7 +6,7 @@ namespace Digibank
     {
         static void Main(string[] args)
         {
-            
+             
         }
     }
 }
