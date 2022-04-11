@@ -40,5 +40,18 @@ namespace Digibank.Classes
                     break;
             }
         }
+
+        private static void TelaCriarConta()
+        {
+            Console.Clear();
+
+            Console.WriteLine("                                                ");
+            Console.WriteLine("            Digite seu nome:                    ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            Digite o CPF:                       ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            Digite a senha:                     ");
+            Console.WriteLine("            ==============================      ");
+        }
     }
 }
