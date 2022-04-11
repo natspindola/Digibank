@@ -9,34 +9,47 @@ namespace Digibank.Classes
 {
     public abstract class Conta : Banco, IConta
     {
+        public Conta()
+        {
+
+        }
+
+        public double Saldo { get; protected set; }
+        public string NumeroAgencia { get; private set; }
+        public string NumeroConta { get; private set; }
+
         public double ConsultaSalto()
         {
-            throw new NotImplementedException();
+            return this.Saldo;
         }
 
         public void Deposita(double valor)
         {
-            throw new NotImplementedException();
-        }
-
-        public string GetCodigoDoBanco()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GetNumeroAgencia()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GetNumeroConta()
-        {
-            throw new NotImplementedException();
+            this.Saldo += valor;
         }
 
         public bool Saca(double valor)
         {
-            throw new NotImplementedException();
+            if (valor > this.ConsultaSalto())
+                return false;
+
+            this.Saldo = valor;
+            return true;
+        }
+
+        public string GetCodigoDoBanco()
+        {
+            return this.CodigoDoBanco;
+        }
+
+        public string GetNumeroAgencia()
+        {
+            return this.NumeroAgencia;
+        }
+
+        public string GetNumeroDaConta()
+        {
+            return this.NumeroConta; 
         }
     }
 }

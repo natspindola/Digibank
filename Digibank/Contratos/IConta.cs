@@ -13,6 +13,6 @@ namespace Digibank.Contratos
         double ConsultaSalto();
         string GetCodigoDoBanco();
         string GetNumeroAgencia();
-        string GetNumeroConta();
+        string GetNumeroDaConta();
     }
 }
