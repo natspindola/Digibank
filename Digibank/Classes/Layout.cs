@@ -33,7 +33,7 @@ namespace Digibank.Classes
                     TelaCriarConta();
                     break;
                 case 2:
-                    Console.WriteLine("Opção 2");
+                    TelaLogin();
                     break;
                 default:
                     Console.WriteLine("Opção inválida");
@@ -56,9 +56,23 @@ namespace Digibank.Classes
             string senha = Console.ReadLine();
             Console.WriteLine("            ==============================      ");
 
-            Console.WriteLine(nome);
-            Console.WriteLine(cpf);
-            Console.WriteLine(senha);
+            // Criar uma conta
+
+        }
+
+        private static void TelaLogin()
+        {
+            Console.Clear();
+
+            Console.WriteLine("                                                ");
+            Console.WriteLine("            Digite o CPF:                       ");
+            string cpf = Console.ReadLine();
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            Digite a senha:                     ");
+            string senha = Console.ReadLine();
+            Console.WriteLine("            ==============================      ");
+
+            // Logar no sistema
         }
     }
 }
