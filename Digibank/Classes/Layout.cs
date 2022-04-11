@@ -30,7 +30,7 @@ namespace Digibank.Classes
             switch (opcao)
             {
                 case 1:
-                    Console.WriteLine("Opção 1");
+                    TelaCriarConta();
                     break;
                 case 2:
                     Console.WriteLine("Opção 2");
@@ -47,11 +47,18 @@ namespace Digibank.Classes
 
             Console.WriteLine("                                                ");
             Console.WriteLine("            Digite seu nome:                    ");
+            string nome = Console.ReadLine();
             Console.WriteLine("            ==============================      ");
             Console.WriteLine("            Digite o CPF:                       ");
+            string cpf = Console.ReadLine();
             Console.WriteLine("            ==============================      ");
             Console.WriteLine("            Digite a senha:                     ");
+            string senha = Console.ReadLine();
             Console.WriteLine("            ==============================      ");
+
+            Console.WriteLine(nome);
+            Console.WriteLine(cpf);
+            Console.WriteLine(senha);
         }
     }
 }
