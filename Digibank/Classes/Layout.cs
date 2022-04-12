@@ -93,7 +93,7 @@ namespace Digibank.Classes
 
             if(pessoa != null)
             {
-                // Tela de boas vindas
+                TelaBoasVindas(pessoa);
                 // Tela conta logada
             }else
             {
@@ -109,7 +109,9 @@ namespace Digibank.Classes
 
         private static void TelaBoasVindas(Pessoa pessoa)
         {
-
+            Console.WriteLine("");
+            Console.WriteLine($"          Seja bem vindo, {pessoa.Nome}");
+            Console.WriteLine("");
         }
     }
 }
