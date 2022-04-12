@@ -11,12 +11,14 @@ namespace Digibank.Classes
     {
         public Conta()
         {
-
+            this.NumeroConta = "0001";
+            Conta.NumeroDaContaSequencial++;
         }
 
         public double Saldo { get; protected set; }
         public string NumeroAgencia { get; private set; }
         public string NumeroConta { get; private set; }
+        public static int NumeroDaContaSequencial { get; set; }
 
         public double ConsultaSalto()
         {
