@@ -88,6 +88,23 @@ namespace Digibank.Classes
             Console.WriteLine("            ==============================      ");
 
             // Logar no sistema
+
+            Pessoa pessoa = pessoas.FirstOrDefault(x => x.CPF == cpf && x.Senha == senha);
+
+            if(pessoa != mull)
+            {
+                // Tela de boas vindas
+                // Tela conta logada
+            }else
+            {
+                Console.Clear();
+
+                Console.WriteLine("            Pessoa não cadastrada               ");
+                Console.WriteLine("            ==============================      ");
+
+                Console.WriteLine();
+                Console.WriteLine();
+            }
         }
     }
 }
