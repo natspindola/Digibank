@@ -113,5 +113,25 @@ namespace Digibank.Classes
             Console.WriteLine($"          Seja bem vindo, {pessoa.Nome}");
             Console.WriteLine("");
         }
+
+        private static void TelaContaLogada(Pessoa pessoa)
+        {
+            Console.Clear();
+
+            TelaBoasVindas(pessoa);
+
+            Console.WriteLine("            Digite a opção desejada:            ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            1 - Realizar um depósito            ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            2 - Realizar um saque               ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            3 - Consultar saldo                 ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            4 - Extrato                         ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            5 - Sair                            ");
+            Console.WriteLine("            ==============================      ");
+        }
     }
 }
