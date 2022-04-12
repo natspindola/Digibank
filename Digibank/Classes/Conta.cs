@@ -17,7 +17,7 @@ namespace Digibank.Classes
 
         public double Saldo { get; protected set; }
         public string NumeroAgencia { get; private set; }
-        public string NumeroConta { get; private set; }
+        public string NumeroConta { get; protected set; }
         public static int NumeroDaContaSequencial { get; set; }
 
         public double ConsultaSalto()

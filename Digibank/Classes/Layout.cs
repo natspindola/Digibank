@@ -8,6 +8,7 @@ namespace Digibank.Classes
 {
     public class Layout
     {
+        private static List<Pessoa> pessoas = new List<Pessoa>();
         private static int opcao = 0;
 
         public static void TelaPrincipal()
