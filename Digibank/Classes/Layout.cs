@@ -91,7 +91,7 @@ namespace Digibank.Classes
 
             Pessoa pessoa = pessoas.FirstOrDefault(x => x.CPF == cpf && x.Senha == senha);
 
-            if(pessoa != mull)
+            if(pessoa != null)
             {
                 // Tela de boas vindas
                 // Tela conta logada
@@ -105,6 +105,11 @@ namespace Digibank.Classes
                 Console.WriteLine();
                 Console.WriteLine();
             }
+        }
+
+        private static void TelaBoasVindas(Pessoa pessoa)
+        {
+
         }
     }
 }
