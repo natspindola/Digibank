@@ -59,6 +59,20 @@ namespace Digibank.Classes
 
             // Criar uma conta
 
+            ContaCorrente contaCorrente = new ContaCorrente();
+            Pessoa pessoa = new Pessoa();
+
+            pessoa.SetNome(nome);
+            pessoa.SetCPF(cpf);
+            pessoa.SetSenha(senha);
+            pessoa.Conta = contaCorrente;
+
+            pessoas.Add(pessoa);
+
+            Console.Clear();
+
+            Console.WriteLine("            Conta cadastrada com sucesso!       ");
+            Console.WriteLine("            ==============================      ");
         }
 
         private static void TelaLogin()
