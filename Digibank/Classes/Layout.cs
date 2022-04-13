@@ -149,6 +149,7 @@ namespace Digibank.Classes
             switch(opcao)
             {
                 case 1:
+                    TelaDeposito(pessoa);
                     break;
                 case 2:
                     break;
@@ -190,7 +191,7 @@ namespace Digibank.Classes
             Console.WriteLine("                                                ");
             Console.WriteLine("                                                ");
 
-
+            OpcaoVoltarLogado(pessoa);
         }
 
         private static void OpcaoVoltarLogado(Pessoa pessoa)
@@ -228,6 +229,32 @@ namespace Digibank.Classes
                 Console.WriteLine("            Opção inválida                      ");
                 Console.WriteLine("            ==============================      ");
             }
+        }
+
+        private static void TelaSaque(Pessoa pessoa)
+        {
+            Console.Clear();
+
+            TelaBoasVindas(pessoa);
+
+            Console.WriteLine("            Digite o valor do saque:            ");
+            double valor = double.Parse(Console.ReadLine());
+            Console.WriteLine("            ==============================      ");
+
+            bool okSaque = pessoa.Conta.Saca(valor);
+
+            Console.Clear();
+
+            TelaBoasVindas(pessoa);
+
+            Console.WriteLine("                                                ");
+            Console.WriteLine("                                                ");
+            Console.WriteLine("           Saque realizado com sucesso!         ");
+            Console.WriteLine("       ===================================      ");
+            Console.WriteLine("                                                ");
+            Console.WriteLine("                                                ");
+
+            OpcaoVoltarLogado(pessoa);
         }
     }
 }
