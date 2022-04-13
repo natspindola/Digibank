@@ -209,5 +209,25 @@ namespace Digibank.Classes
             else
                 TelaPrincipal();
         }
+
+        private static void OpcaoVoltarDeslogado()
+        {
+            Console.WriteLine("            Entre com uma opção abaixo          ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            1 - Voltar para menu principal      ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            2 - Sair                            ");
+            Console.WriteLine("            ==============================      ");
+
+            opcao = int.Parse(Console.ReadLine());
+
+            if (opcao == 1)
+                TelaPrincipal();
+            else
+            {
+                Console.WriteLine("            Opção inválida                      ");
+                Console.WriteLine("            ==============================      ");
+            }
+        }
     }
 }
