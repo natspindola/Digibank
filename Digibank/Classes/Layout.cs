@@ -275,6 +275,7 @@ namespace Digibank.Classes
 
             Console.WriteLine($"           Seu saldo é: {pessoa.Conta.ConsultaSalto()} ");
             Console.WriteLine("            ==============================      ");
+            Console.WriteLine("                                                ");
 
             OpcaoVoltarLogado(pessoa);
         }
