@@ -8,9 +8,15 @@ namespace Digibank.Classes
 {
     public class Extrato
     {
-        public Extrato()
+        public Extrato(DateTime data, string descricao, double valor)
         {
-
+            this.Data = data;
+            this.Descricao = descricao;
+            this.Valor = valor;
         }
+
+        public DateTime Data { get; set; }
+        public string Descricao { get; set; }
+        public double Valor { get; set; }
     }
 }
