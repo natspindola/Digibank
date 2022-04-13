@@ -152,6 +152,7 @@ namespace Digibank.Classes
                     TelaDeposito(pessoa);
                     break;
                 case 2:
+                    TelaSaque(pessoa);
                     break;
                 case 3:
                     break;
@@ -249,8 +250,16 @@ namespace Digibank.Classes
 
             Console.WriteLine("                                                ");
             Console.WriteLine("                                                ");
-            Console.WriteLine("           Saque realizado com sucesso!         ");
-            Console.WriteLine("       ===================================      ");
+            if (okSaque)
+            {
+                Console.WriteLine("           Saque realizado com sucesso!         ");
+                Console.WriteLine("       ===================================      ");
+            }
+            else
+            {
+                Console.WriteLine("                Saldo insuficiente              ");
+                Console.WriteLine("       ===================================      ");
+            }
             Console.WriteLine("                                                ");
             Console.WriteLine("                                                ");
 
