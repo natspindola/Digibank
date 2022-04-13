@@ -166,5 +166,20 @@ namespace Digibank.Classes
                     break;
             }
         }
+
+        private static void TelaDeposito(Pessoa pessoa)
+        {
+            Console.Clear();
+
+            TelaBoasVindas(pessoa);
+
+            Console.WriteLine("            Digite o valor do depósito:         ");
+            double valor = double.Parse(Console.ReadLine());
+            Console.WriteLine("            ==============================      ");
+
+            pessoa.Conta.Deposita(valor);
+
+            Console.Clear();
+        }
     }
 }
