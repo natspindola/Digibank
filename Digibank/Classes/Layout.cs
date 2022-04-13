@@ -155,6 +155,7 @@ namespace Digibank.Classes
                     TelaSaque(pessoa);
                     break;
                 case 3:
+                    TelaSaldo(pessoa);
                     break;
                 case 4:
                     break;
@@ -262,6 +263,18 @@ namespace Digibank.Classes
             }
             Console.WriteLine("                                                ");
             Console.WriteLine("                                                ");
+
+            OpcaoVoltarLogado(pessoa);
+        }
+
+        private static void TelaSaldo(Pessoa pessoa)
+        {
+            Console.Clear();
+
+            TelaBoasVindas(pessoa);
+
+            Console.WriteLine($"           Seu saldo é: {pessoa.Conta.ConsultaSalto()} ");
+            Console.WriteLine("            ==============================      ");
 
             OpcaoVoltarLogado(pessoa);
         }
