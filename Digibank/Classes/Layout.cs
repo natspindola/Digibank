@@ -180,6 +180,34 @@ namespace Digibank.Classes
             pessoa.Conta.Deposita(valor);
 
             Console.Clear();
+
+            TelaBoasVindas(pessoa);
+
+            Console.WriteLine("                                                ");
+            Console.WriteLine("                                                ");
+            Console.WriteLine("         Depósito realizado com sucesso!        ");
+            Console.WriteLine("       ===================================      ");
+            Console.WriteLine("                                                ");
+            Console.WriteLine("                                                ");
+
+
+        }
+
+        private static void OpcaoVoltarLogado(Pessoa pessoa)
+        {
+            Console.WriteLine("            Entre com uma opção abaixo          ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            1 - Voltar para minha conta         ");
+            Console.WriteLine("            ==============================      ");
+            Console.WriteLine("            2 - Sair                            ");
+            Console.WriteLine("            ==============================      ");
+
+            opcao = int.Parse(Console.ReadLine());
+
+            if (opcao == 1)
+                TelaContaLogada(pessoa);
+            else
+                TelaPrincipal();
         }
     }
 }
