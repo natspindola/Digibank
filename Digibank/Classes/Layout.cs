@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Digibank.Classes
@@ -73,6 +74,10 @@ namespace Digibank.Classes
 
             Console.WriteLine("            Conta cadastrada com sucesso!       ");
             Console.WriteLine("            ==============================      ");
+
+            Thread.Sleep(2000); //espera 2 segundo para ir para a tela logada
+
+            TelaContaLogada(pessoa);
         }
 
         private static void TelaLogin()
@@ -94,7 +99,9 @@ namespace Digibank.Classes
             if(pessoa != null)
             {
                 TelaBoasVindas(pessoa);
-                // Tela conta logada
+
+                TelaContaLogada(pessoa);
+
             }else
             {
                 Console.Clear();
