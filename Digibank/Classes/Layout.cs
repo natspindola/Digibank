@@ -116,8 +116,12 @@ namespace Digibank.Classes
 
         private static void TelaBoasVindas(Pessoa pessoa)
         {
+            string msgTelaBemVindo =
+                $"{pessoa.Nome} | Banco: {pessoa.Conta.GetCodigoDoBanco()} " +
+                $"| Agência: {pessoa.Conta.GetNumeroAgencia()} | Conta: {pessoa.Conta.GetNumeroDaConta()}";
+
             Console.WriteLine("");
-            Console.WriteLine($"          Seja bem vindo, {pessoa.Nome}");
+            Console.WriteLine($"          Seja bem vindo, {msgTelaBemVindo}");
             Console.WriteLine("");
         }
 
@@ -153,6 +157,7 @@ namespace Digibank.Classes
                 case 4:
                     break;
                 case 5:
+                    TelaPrincipal();
                     break;
                 default:
                     Console.Clear();
