@@ -279,5 +279,32 @@ namespace Digibank.Classes
 
             OpcaoVoltarLogado(pessoa);
         }
+
+        private static void TelaExtrato(Pessoa pessoa)
+        {
+            Console.Clear();
+
+            TelaBoasVindas(pessoa);
+
+            if(pessoa.Conta.Extrato().Any())
+            {
+                //mostrar extrato
+
+                double total = pessoa.Conta.Extrato().Sum(x => x.Valor);
+
+                Console.WriteLine($"                                               ");
+                Console.WriteLine("                                                ");
+                Console.WriteLine($"           SUB TOTAL: {total}                  ");
+                Console.WriteLine("            ==============================      ");
+
+            }
+            else
+            {
+                Console.WriteLine($"           Não há extrato a ser exibido!       ");
+                Console.WriteLine("            ==============================      ");
+            }
+
+            OpcaoVoltarLogado(pessoa);
+        }
     }
 }
