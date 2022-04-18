@@ -40,7 +40,7 @@ namespace Digibank.Classes
                 return false;
 
             DateTime dataAtual = DateTime.Now;
-            this.Movimentacoes.Add(new Extrato(dataAtual, "Saque", valor));
+            this.Movimentacoes.Add(new Extrato(dataAtual, "Saque", -valor));
 
             this.Saldo = valor;
             return true;
