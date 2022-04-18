@@ -29,6 +29,8 @@ namespace Digibank.Classes
 
         public void Deposita(double valor)
         {
+            DateTime dataAtual = DateTime.Now;
+            this.Movimentacoes.Add(new Extrato(dataAtual, "Deposito", valor));
             this.Saldo += valor;
         }
 
@@ -36,6 +38,9 @@ namespace Digibank.Classes
         {
             if (valor > this.ConsultaSalto())
                 return false;
+
+            DateTime dataAtual = DateTime.Now;
+            this.Movimentacoes.Add(new Extrato(dataAtual, "Saque", valor));
 
             this.Saldo = valor;
             return true;
@@ -58,7 +63,7 @@ namespace Digibank.Classes
 
         public List<Extrato> Extrato()
         {
-            throw new NotImplementedException();
+            return this.Movimentacoes;
         }
     }
 }
