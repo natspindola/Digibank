@@ -13,12 +13,14 @@ namespace Digibank.Classes
         {
             this.NumeroAgencia = "0001";
             Conta.NumeroDaContaSequencial++;
+            this.Movimentacoes = new List<Extrato>();
         }
 
         public double Saldo { get; protected set; }
         public string NumeroAgencia { get; private set; }
         public string NumeroConta { get; protected set; }
         public static int NumeroDaContaSequencial { get; set; }
+        private List<Extrato> Movimentacoes;
 
         public double ConsultaSalto()
         {
@@ -52,6 +54,11 @@ namespace Digibank.Classes
         public string GetNumeroDaConta()
         {
             return this.NumeroConta; 
+        }
+
+        public List<Extrato> Extrato()
+        {
+            throw new NotImplementedException();
         }
     }
 }
